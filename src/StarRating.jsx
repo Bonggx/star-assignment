@@ -16,12 +16,14 @@ function StarRating({ rating }) {
 
   return (
     <div className="star-wrapper">
+        {Array.from({ length: numStars }, (_, i) => (
       <img
         key={crypto.randomUUID()}
         alt=""
         className="gold-star"
         src="/star.svg"
       />
+        ))}
     </div>
   )
 }
